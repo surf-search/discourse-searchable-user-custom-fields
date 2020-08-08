@@ -1,0 +1,1 @@
+<a data-topic-id="{{topic.id}}" class="chord-directory-topic-link">{{{topic.fancyTitle}}}</a>

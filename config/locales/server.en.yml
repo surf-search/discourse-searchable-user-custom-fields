@@ -1,0 +1,6 @@
+en:
+  site_settings:
+    chord_directory_enabled: "Enable the Knowledge Explorer Plugin"
+    chord_directory_categories: "A list of category slugs to include in the knowledge explorer"
+    chord_directory_tags: "A list of tags to include in the knowledge explorer"
+    chord_directory_add_solved_filter: "Adds a filter for solved topics -- requires Discourse Solved to be installed and enabled"

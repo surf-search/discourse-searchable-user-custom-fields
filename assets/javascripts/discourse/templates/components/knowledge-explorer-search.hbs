@@ -1,0 +1,12 @@
+<span class="chord-directory-search-wrapper">
+  {{input
+    type="text"
+    value=(readonly searchTerm)
+    input=(action "onSearchTermChange" value="target.value")
+    class="no-blur chord-directory-search-bar"
+    autocorrect="off"
+    placeholder=(i18n "chord_directory.search.placeholder")
+    autocapitalize="off"
+  }}
+  {{d-icon "search"}}
+</span>

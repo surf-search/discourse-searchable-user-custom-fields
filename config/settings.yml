@@ -1,0 +1,15 @@
+plugins:
+  chord_directory_enabled:
+    default: false
+    client: true
+  chord_directory_categories:
+    type: category_list
+    default: ""
+    client: true
+  chord_directory_tags:
+    type: tag_list
+    default: ""
+    client: true
+  chord_directory_add_solved_filter:
+    default: false
+    client: true

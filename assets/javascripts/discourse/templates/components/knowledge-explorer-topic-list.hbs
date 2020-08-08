@@ -1,0 +1,33 @@
+{{#load-more selector=".topic-list tr" action=loadMore}}
+  <table class="topic-list">
+    <thead>
+      <th {{action "sortListTitle"}}>
+        {{i18n 'chord_directory.column_titles.topic'}}
+        {{#if sortTitle}}
+          {{#if ascending}}
+            {{d-icon 'angle-up'}}
+          {{else}}
+            {{d-icon 'angle-down'}}
+          {{/if}}
+        {{/if}}
+      </th>
+      <th {{action "sortListActivity"}}>
+        {{i18n 'chord_directory.column_titles.activity'}}
+        {{#if sortActivity}}
+          {{#if ascending}}
+            {{d-icon 'angle-up'}}
+          {{else}}
+            {{d-icon 'angle-down'}}
+          {{/if}}
+        {{/if}}
+      </th>
+    </thead>
+    <tbody>
+      {{#each topics as |topic|}}
+        {{raw "chord-directory-topic-list-item" topic=topic}}
+      {{/each}}
+    </tbody>
+  </table>
+{{/load-more}}
+
+{{conditional-loading-spinner condition=loading}}
