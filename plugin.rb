@@ -39,6 +39,17 @@ after_initialize do
       end
     end
 
-    users = UserSearch.new(groups: group_ids, include_staged_users: true)
+    users = User.where(active: true).where(staged: false)
+    selected_groups = SiteSetting.chord_directory_groups.split('|')
+    if selected_groups
+      group_ids = Group.where('name IN (?)', selected_groups).pluck(:id)
+      users = users.joins("INNER JOIN group_users ON group_users.user_id = users.id")
+        .where("group_users.group_id IN (?)", group_ids)
+    end
+
+    # user_ids = DB.query("Select DISTINCT user_id from group_users gu where gu.id IN (?)", group_ids)
+    # users = UserSearch.new(groups: group_ids, include_staged_users: true)
+
+    users
   end
 end
