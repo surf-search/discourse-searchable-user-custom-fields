@@ -12,7 +12,8 @@ module ChordDirectory
         search_term: params[:search],
         ascending: params[:ascending],
         order: params[:order],
-        page: params[:page]
+        page: params[:page],
+        groups: params[:groups]
       }
 
       query = ChordDirectory::Query.new(current_user, filters).list

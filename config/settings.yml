@@ -10,6 +10,10 @@ plugins:
     type: tag_list
     default: ""
     client: true
+  chord_directory_groups:
+    type: group_list
+    default: ""
+    client: true
   chord_directory_add_solved_filter:
     default: false
     client: true

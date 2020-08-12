@@ -16,6 +16,13 @@ module ChordDirectory
       SiteSetting.chord_directory_tags.split('|')
     end
 
+    def self.groups
+      SiteSetting.chord_directory_groups.split('|')
+    end
+
+
+
+
     def list
       # query for topics matching selected categories & tags
       tq = TopicQuery.new(@user)
