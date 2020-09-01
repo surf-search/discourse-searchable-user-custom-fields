@@ -43,7 +43,7 @@ after_initialize do
     selected_groups = SiteSetting.chord_directory_groups.split('|')
     if selected_groups
       group_ids = Group.where('name IN (?)', selected_groups).pluck(:id)
-      users = users.joins("INNER JOIN group_users ON group_users.user_id = users.id")
+      users = users.distinct.joins("INNER JOIN group_users ON group_users.user_id = users.id")
         .where("group_users.group_id IN (?)", group_ids)
     end
 
