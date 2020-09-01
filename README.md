@@ -6,4 +6,4 @@ From discourse directory:
 
 `rm -rf tmp; bundle exec rails s`
 
-`enter app rails c`
+`rails c`
