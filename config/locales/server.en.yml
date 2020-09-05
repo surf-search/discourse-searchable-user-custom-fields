@@ -1,6 +1,25 @@
 en:
+  chord_directory:
+    default_title: "You've been invited to mingle!"
+    default_message: |
+      _Thanks for installing the Mingle plugin! :smiling_face_with_three_hearts: This is a template for the messages which will go out to paired users._
+
+      _Some things to note!_
+      - _You can customize the title of the message that goes out by editing the title of this post_
+      - _Anything **below** the horizontal line will appear in the message which goes out to matches._
+      - _Note that you can use the following format to apply user-specific messaging to the template_
+
+      > Hey, %{1.name}, meet %{2.name}!
+      > Did you know that %{1.custom_fields.fun_fact}, while %{2.custom_fields.fun_fact}?
+
+      <sup>^^ PS, this works for the message title, too! :exploding_head:</sup>
+
+      _Customize to your heart's content, and be sure to report any issues [here](https://www.github.com/gdpelican/mingle/issues)!_ :star2: :star2: :star2:
+
+      ------------------
+
+      Hey, %{1.name}, meet %{2.name}; they're awesome! Why not schedule some time to get to know each other a little bit?
   site_settings:
-    chord_directory_enabled: "Enable the Knowledge Explorer Plugin"
-    chord_directory_categories: "A list of category slugs to include in the knowledge explorer"
-    chord_directory_tags: "A list of tags to include in the knowledge explorer"
-    chord_directory_add_solved_filter: "Adds a filter for solved topics -- requires Discourse Solved to be installed and enabled"
+    chord_directory_enabled: "Enable the Chord Directory plugin"
+    chord_directory_interval_number: "Number of days/weeks/months per user search data re-indexing"
+    chord_directory_interval_type: " "

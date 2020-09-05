@@ -2,18 +2,10 @@ plugins:
   chord_directory_enabled:
     default: false
     client: true
-  chord_directory_categories:
-    type: category_list
-    default: ""
-    client: true
-  chord_directory_tags:
-    type: tag_list
-    default: ""
-    client: true
-  chord_directory_groups:
-    type: group_list
-    default: ""
-    client: true
-  chord_directory_add_solved_filter:
-    default: false
-    client: true
+  chord_directory_interval_number:
+    default: 1
+  chord_directory_interval_type:
+    enum: "ChordDirectory::IntervalOptions"
+    default: days
+  chord_directory_ucfs:
+    default: "Ask Me About"

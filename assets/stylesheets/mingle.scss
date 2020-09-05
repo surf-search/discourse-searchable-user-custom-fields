@@ -1,0 +1,8 @@
+.mingle-modal .pika-single:not(.is-hidden) {
+  position: fixed !important;
+}
+
+.mingle-reschedule {
+  width: 100%;
+  .setting-value input { width: calc(100% - 20px); }
+}

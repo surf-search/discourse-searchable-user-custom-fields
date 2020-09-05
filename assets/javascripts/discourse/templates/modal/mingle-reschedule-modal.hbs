@@ -1,0 +1,13 @@
+{{#d-modal-body}}
+  {{future-date-input input=model.at}}
+{{/d-modal-body}}
+
+<div class="modal-footer">
+  {{#if error}}
+    {{i18n 'generic_error'}}
+  {{/if}}
+  {{d-button action="reschedule"
+             label="mingle.reschedule"
+             class="btn-primary"}}
+  {{d-button action="closeModal" label="close"}}
+</div>

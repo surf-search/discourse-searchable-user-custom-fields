@@ -1,0 +1,8 @@
+ru:
+  js:
+    chord_directory:
+      reschedule: Перепланирование
+      modal_title: Перенос следующего события Chord Directory Re-Indexing
+      interval_days: "Дни"
+      interval_weeks: "Недели"
+      interval_months: "Месяцы"
