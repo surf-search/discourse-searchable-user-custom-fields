@@ -12,7 +12,7 @@ CHORD_DIRECTORY_SITE_SETTINGS = [
   "chord_directory_enabled",
   "chord_directory_interval_type",
   "chord_directory_interval_number",
-  "chord_directory_user_custom_fields",
+  "chord_directory_ucfs",
   "chord_directory_ucfs"
 ].freeze
 
@@ -32,8 +32,8 @@ after_initialize do
 
   Discourse::Application.routes.append do
     namespace :admin, constraints: StaffConstraint.new do
-      get  "mingle/scheduled"  => "mingles#scheduled"
-      post "mingle/reschedule" => "mingles#reschedule"
+      get  "chord-directory-indexing/scheduled"  => "chord-directory-indexing#scheduled"
+      post "chord-directory-indexing/reschedule" => "chord-directory-indexing#reschedule"
     end
   end
 
