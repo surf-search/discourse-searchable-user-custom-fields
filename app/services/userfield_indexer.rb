@@ -18,7 +18,7 @@ module ChordDirectory
       # users.each {|u| data_by_user[u.id].push(u.username_lower || '', u.name ? u.name.downcase: '')}
 
       users.each do |u|
-        if data_by_user.has_value?(u.id)
+        if data_by_user.key?(u.id)
           # add the username data that always is in there like:  discourse/app/services/search_indexer.rb 
           data_by_user[u.id].push(u.username_lower || '', u.name ? u.name.downcase: '')
           # add the search data to the index
