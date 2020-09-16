@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# name: discourse-chord-directory
+# name: chord-directory-plus
 # about: A plugin to make it easy to explore and find users
 # version: 0.1
 # author: Tosin Sonuyi
