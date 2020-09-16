@@ -13,3 +13,10 @@ For the interactive console:
 For in line debugging:
 
 `binding.pry`
+
+For starting mailcatcher:
+
+move into the /discourse directory
+
+`mailcatcher`
+
