@@ -37,10 +37,45 @@ after_initialize do
   end
 
   DiscourseEvent.on(:site_setting_changed) do |setting|
-    if CHORD_DIRECTORY_SITE_SETTINGS.include?(setting.name.to_s)
+    if CHORD_DIRECTORY_SITE_SETTINGS.include?(setting.to_s)
+      Rails.logger.info "Chord directory Setting #{setting} has been changed"
       SiteSetting.refresh!
       at = SiteSetting.chord_directory_interval_number.send(SiteSetting.chord_directory_interval_type).from_now
+      Rails.logger.info "Chord directory Index Scheduled at #{at}"
       ChordDirectory::Scheduler.new.reschedule!(at: at)
     end
   end
 end
+
+
+# took this from chat inegration plugin telegram provider
+#   if Gem::Version.new(Discourse::VERSION::STRING) > Gem::Version.new("2.3.0.beta8")
+#     DiscourseEvent.on(:site_setting_changed) do |setting_name, old_value, new_value|
+#       isEnabledSetting = setting_name == 'chord_directory_enabled'
+
+  
+#       if (isEnabledSetting)
+#         enabled = isEnabledSetting ? new_value == true : SiteSetting.chord_directory_enabled
+  
+#         if enabled
+#           SiteSetting.refresh!
+#           at = SiteSetting.chord_directory_interval_number.send(SiteSetting.chord_directory_interval_type).from_now
+#           ChordDirectory::Scheduler.new.reschedule!(at: at)
+#         end
+#       end
+#     end
+#   else
+#     DiscourseEvent.on(:site_setting_saved) do |sitesetting|
+#       isEnabledSetting = sitesetting.name == 'chord_directory_enabled'
+  
+#       if (isEnabledSetting)
+#         enabled = isEnabledSetting ? sitesetting.value == 't' : SiteSetting.chord_directory_enabled
+#         if enabled
+#           SiteSetting.refresh!
+#           at = SiteSetting.chord_directory_interval_number.send(SiteSetting.chord_directory_interval_type).from_now
+#           ChordDirectory::Scheduler.new.reschedule!(at: at)
+#         end
+#       end
+#     end
+#   end
+# end

@@ -1,7 +1,6 @@
 plugins:
   chord_directory_enabled:
     default: false
-    client: true
   chord_directory_interval_number:
     default: 1
   chord_directory_interval_type:

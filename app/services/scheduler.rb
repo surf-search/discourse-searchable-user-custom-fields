@@ -3,7 +3,7 @@ module ChordDirectory
     def reschedule!(at:)
       unschedule!
       if SiteSetting.chord_directory_enabled
-        Rails.logger.info "Rescheduling next user_search_data indexing for #{SiteSetting.chord_direcotry_interval_number} #{SiteSetting.chord_directory_interval_type} from now"
+        Rails.logger.info "Rescheduling next user_search_data indexing for #{SiteSetting.chord_directory_interval_number} #{SiteSetting.chord_directory_interval_type} from now"
         Jobs.enqueue_at(at, :index_user_search_data)
         MessageBus.publish '/IndexUserSearchData', { at: at }
       else
