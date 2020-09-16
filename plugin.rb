@@ -46,36 +46,3 @@ after_initialize do
     end
   end
 end
-
-
-# took this from chat inegration plugin telegram provider
-#   if Gem::Version.new(Discourse::VERSION::STRING) > Gem::Version.new("2.3.0.beta8")
-#     DiscourseEvent.on(:site_setting_changed) do |setting_name, old_value, new_value|
-#       isEnabledSetting = setting_name == 'chord_directory_enabled'
-
-  
-#       if (isEnabledSetting)
-#         enabled = isEnabledSetting ? new_value == true : SiteSetting.chord_directory_enabled
-  
-#         if enabled
-#           SiteSetting.refresh!
-#           at = SiteSetting.chord_directory_interval_number.send(SiteSetting.chord_directory_interval_type).from_now
-#           ChordDirectory::Scheduler.new.reschedule!(at: at)
-#         end
-#       end
-#     end
-#   else
-#     DiscourseEvent.on(:site_setting_saved) do |sitesetting|
-#       isEnabledSetting = sitesetting.name == 'chord_directory_enabled'
-  
-#       if (isEnabledSetting)
-#         enabled = isEnabledSetting ? sitesetting.value == 't' : SiteSetting.chord_directory_enabled
-#         if enabled
-#           SiteSetting.refresh!
-#           at = SiteSetting.chord_directory_interval_number.send(SiteSetting.chord_directory_interval_type).from_now
-#           ChordDirectory::Scheduler.new.reschedule!(at: at)
-#         end
-#       end
-#     end
-#   end
-# end
