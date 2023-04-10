@@ -1,4 +1,4 @@
-# chord-directory-plus
+# discourse-searchable-user-custom-fields
 
 For testing. throw this project in the discourse/plugins directory
 
