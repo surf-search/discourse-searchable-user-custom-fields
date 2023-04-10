@@ -16,7 +16,7 @@ CHORD_DIRECTORY_SITE_SETTINGS = [
 ].freeze
 
 def chord_directory_require(path)
-  require Rails.root.join('plugins', 'chord-directory-plus', 'app', path).to_s
+  require Rails.root.join('plugins', 'discourse-searchable-user-custom-fields', 'app', path).to_s
 end
 
 register_asset 'stylesheets/mingle.scss'
