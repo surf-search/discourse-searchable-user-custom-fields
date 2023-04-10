@@ -6,7 +6,7 @@
 - The variable/settings names can be found under `chord` as that's what I originally called the project before migrating it here.
 - This was originally forked from the old mingle plugin
 
-## Quick Start in 3 Steps
+## Get Started
 
 This quick start shows you how to install this plugin and use it.  Recommended if you have:
 
@@ -45,6 +45,9 @@ There are only a few options in configuring your Discourse settings to enable yo
 - Make sure to enable the the plugin
 - Set an interval for re-indexing
 - Let the plugin know which fields you want to expose for search, separated by the `|` character
+
+![image](https://user-images.githubusercontent.com/13176059/231014373-03ca932e-6476-4fd3-8d61-5d4b7c1af491.png)
+
 
 
 
